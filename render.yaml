@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: toss-smart-home
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: node server.js
+    envVars:
+      - key: SMART_HOME_API_HOST
+        value: 0.0.0.0
+      - key: SMART_HOME_API_PORT
+        value: 10000
+      - key: SMART_HOME_PUBLIC_BASE_URL
+        sync: false
+      - key: SMART_HOME_ALLOWED_ORIGINS
+        sync: false
+      - key: SMART_HOME_API_KEY
+        generateValue: true
+      - key: SMART_HOME_ENABLE_LOCAL_SCHEDULER
+        value: false
+      - key: SMARTTHINGS_CLIENT_ID
+        sync: false
+      - key: SMARTTHINGS_CLIENT_SECRET
+        sync: false
+      - key: SMARTTHINGS_OAUTH_STATE
+        generateValue: true
+      - key: SMARTTHINGS_SCOPES
+        value: r:devices:* x:devices:* r:locations:* r:rules:* w:rules:*

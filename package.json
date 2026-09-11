@@ -1,0 +1,23 @@
+{
+  "name": "toss-smart-home",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "api": "node server.js",
+    "webhook": "node webhook-server.js",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.13.5",
+    "@toss/tds-colors": "0.1.0",
+    "@toss/tds-mobile": "2.5.1",
+    "@toss/tds-mobile-ait": "2.5.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.7"
+  }
+}
