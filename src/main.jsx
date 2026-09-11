@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Badge, Button } from '@toss/tds-mobile';
-import { TDSMobileAITProvider } from '@toss/tds-mobile-ait';
 import './styles.css';
 
 const API_BASE = (import.meta.env.VITE_SMART_HOME_API_BASE || '').replace(/\/$/, '');
@@ -1710,8 +1709,4 @@ function ChoiceGroup({ label, options, value, setValue }) {
   );
 }
 
-createRoot(document.getElementById('root')).render(
-  <TDSMobileAITProvider>
-    <App />
-  </TDSMobileAITProvider>
-);
+createRoot(document.getElementById('root')).render(<App />);
