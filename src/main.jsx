@@ -4,7 +4,7 @@ import { Badge, Button } from '@toss/tds-mobile';
 import { TDSMobileAITProvider } from '@toss/tds-mobile-ait';
 import './styles.css';
 
-const API_BASE = (import.meta.env.VITE_SMART_HOME_API_BASE || `${window.location.protocol}//${window.location.hostname}:4176`).replace(/\/$/, '');
+const API_BASE = (import.meta.env.VITE_SMART_HOME_API_BASE || '').replace(/\/$/, '');
 const NOTIFICATION_LIMIT = 30;
 const API_KEY = import.meta.env.VITE_SMART_HOME_API_KEY || '';
 
